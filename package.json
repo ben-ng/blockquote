@@ -1,0 +1,25 @@
+{
+  "author": "Ben Ng <me@benng.me> (http://benng.me)",
+  "name": "blockquote",
+  "description": "Add block quotes to your posts",
+  "keywords": [
+    "scotch",
+    "plugin",
+    "formatter",
+    "blockquote"
+  ],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ben-ng/blockquote.git"
+  },
+  "main": "./lib/blockquote",
+  "dependencies": {},
+  "devDependencies": {
+    "jake": "latest"
+  },
+  "scripts": {
+    "test": "jake test"
+  },
+  "optionalDependencies": {}
+}

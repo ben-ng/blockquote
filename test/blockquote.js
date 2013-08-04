@@ -60,15 +60,15 @@ tests = {
   }
 
 , "blockquote author link title": function () {
-    var actual = blockquote.show('a{% blockquote Douglas Adams http://intergalactic.federation.edu/pizza-offer Pizza Offer %}something{% endblockquote %}b')
-      , expected = 'a<blockquote><p>something</p><footer><strong>Douglas Adams</strong><cite><a href="http://intergalactic.federation.edu/pizza-offer">Pizza Offer</a></cite></footer></blockquote>b';
+    var actual = blockquote.show('a{% blockquote Douglas Adams <a href="http://intergalactic.federation.edu/pizza-offer">http://intergalactic.federation.edu/pizza-offer</a> Pizza Offer %}something{% endblockquote %}b')
+      , expected = 'a<blockquote><p>something</p><footer><strong>Douglas Adams</strong> <cite><a href="http://intergalactic.federation.edu/pizza-offer" target="_blank">Pizza Offer</a></cite></footer></blockquote>b';
 
     assert.strictEqual(actual, expected, 'text is blockquoted with author and citation with link');
   }
 
 , "blockquote author link title (shorttag)": function () {
-    var actual = blockquote.show('a{%blockquote Douglas Adams http://intergalactic.federation.edu/pizza-offer Pizza Offer %}something{%endblockquote%}b')
-      , expected = 'a<blockquote><p>something</p><footer><strong>Douglas Adams</strong><cite><a href="http://intergalactic.federation.edu/pizza-offer">Pizza Offer</a></cite></footer></blockquote>b';
+    var actual = blockquote.show('a{%blockquote Douglas Adams <a href="http://intergalactic.federation.edu/pizza-offer">http://intergalactic.federation.edu/pizza-offer</a> Pizza Offer %}something{%endblockquote%}b')
+      , expected = 'a<blockquote><p>something</p><footer><strong>Douglas Adams</strong> <cite><a href="http://intergalactic.federation.edu/pizza-offer" target="_blank">Pizza Offer</a></cite></footer></blockquote>b';
 
     assert.strictEqual(actual, expected, 'text is blockquoted with author and citation with link');
   }
